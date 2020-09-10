@@ -1,0 +1,2 @@
+# smash_it
+GADS PRACTICE PROJECT

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smash it</title>
+		
+		<meta name="author" content="muhammad Abdullahi">
+	
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.20.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.20.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    
+		<style>
+			*{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        		}
+			html{
+				background-color: hsl(204, 43%,93%);
+				
+				font-family: 'karla', sans-serif;
+				font-size: 100%;
+				line-height: 1.5;
+				}
+			body{	padding:0px;
+					background-color:#fff;
+
+				}
+			header{ display:flex;
+				margin-top:0px;
+				position:fixed;
+				height:100px;
+				background-color:rgb(255, 255, 85);
+				width:100%;
+				left:0;
+				top: 0;
+				padding: 5px;
+				align-items:baseline;
+				}
+			header h1{
+				font-weight:normal;
+				margin-top:0px ;
+				font-size:x-large;
+				
+			}
+			span{
+				font-size:5rem;
+				font-weight: normal;
+				font-family:monospace;
+				color: #55ACEE;
+			}
+			.it{
+				font-size:large;
+			}	
+			.menu{	margin-left:auto;
+				display:inline-block;
+				cursor:pointer;
+				padding-right:5%;
+				align:bottom;
+				
+				}
+					
+			.hambuger{
+				margin-top: 50px;
+				width:	35px;
+				height:5px;
+				background-color:#55ACEE;
+				margin:	6px 0;
+				
+				}				
+			.col{
+				vertical-align:bottom;
+				
+			}
+			main{	
+				padding-top:100px;
+				font-size: 1.5rem;
+				background-color:#ff5;
+				box-shadow: 0 0 10px 5px #55ACEE;
+            	border-radius: 8px;
+            	overflow: hidden;
+            	max-width: 39rem;
+				}
+			section{
+				padding:10px;
+				margin:10px;
+				background-color:#fff;
+				}
+			.coming_soon{
+				font-size: large;
+				font-weight: bold;
+			}	
+			/* section1 showcaase*/
+			#showcase{
+				width: 100%;
+				margin:0px 0px 0px 0px;
+				overflow: hidden;
+			}	
+			#showcase img{
+				
+				border-radius: 10px;
+				border-style:groove;
+				
+			}	
+			#showcase h2{
+				font-size: 1.5rem;
+			}
+			#showcase p{
+				font-size: 1.rem;
+				text-align: left;
+				padding-left:5%;
+			}
+			#showcase .intro{
+				font-family:cursive;
+			}
+			.fig{
+				display:;
+				overflow: hidden;
+			}
+			figure{
+				
+				width:80%;
+			}
+			h3{
+				background:radial-gradient(#ff5,#55ACEE);
+				background-size:auto;
+				border-radius: 20px;
+				padding: 15px;
+				margin-bottom: 5px;
+				width:fit-content;
+			}
+			footer{
+				background-position:left-bottom;
+				background-size:100% 100%;
+				background:linear-gradient(#ff5,#55ACEE);
+				height:100px;
+				position:absolute;
+				padding:20px;
+				padding-right:70px;
+				margin: 10px 0 0 0;
+				left:0;
+				width:100%;
+				}
+		.fa{
+			padding:20px;
+			font-size: 30px;
+			width: 20px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 50%;
+			align: center;
+		}
+		.fa:hover{
+			opacity: 0.7;
+		}
+
+		.fa-facebook{
+			background: #3B5998;
+			color: white;
+		}
+
+		.fa-twitter{
+			background: #55ACEE;
+			color: white;
+		}
+		footer div{
+			height: fit-content;
+
+		}
+		/* weather css*/
+		#weather {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 400;
+			font-size: 1.3em;
+			color: black;
+			text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+			height: fit-content;
+		}	
+			
+		</style>
+		>
+  </head>
+  <body>  
+    <!-- web page header content -->
+		<header>
+			<div class="col"><h1><span>s</span>mash <span class="it">it</span></h1></div>
+			<!-- harmburger -->
+			<div class="menu col">	
+				<div class="hambuger bar1"></div>
+				<div class="hambuger bar2"></div>
+				<div class="hambuger bar3"></div>
+			</div>
+		</header>
+		<!--web page main content -->	
+		<center>
+		<main>
+			<section id="showcase">
+				<div><img src="profile.jpg" height="290" width="300">
+				</div>
+				<div><p class="intro">kindly meet</p>
+					<h2> Mr Sylvester Presly<br>Founder; Smash It. </h2>
+					<p> Welcome to Smash It website <br>
+						Mission: To render excellent services to satisfy our exteemed customers  
+					</P>
+					</div>
+			</section>
+			<section>
+				<div>
+					<h3>Outdoor event <span class="coming_soon">coming soon!!!</span></h3>	 
+				</div>
+				<div class="fig">
+					<p>we will be hosting an outdoor event soon!!!<br>
+						Guess where??<br>
+						its going to hold in New York city(NYC)<br>
+						Trust us!, we promise to hold the event under favourable condition
+					</p>
+
+				</div>
+			</section>
+			<section>
+				<p>
+					kindly click the button below to see the real-time weather condition
+
+				</p>
+
+				<div><h3 onclick="weatherBalloon()" style="cursor: pointer;">Weather Condition</h3></div>
+				<div id="weather"><a ></a>
+					<div id="description"></div>
+					
+						<h2 id="temp"></h2>
+						<div id="location"></div>
+						<div><p id="favourable"></p></div>
+					</div>
+						<script lang="text/javascript">
+							function weatherBalloon( ) {
+								const Url='https://api.openweathermap.org/data/2.5/weather?q=New York,us&APPID=757529ef2fa8800df57f50ce1a31a411'
+								var key = "282a089f80d0f57f91491fb010085bbb";
+								fetch(Url)
+									.then(resp => { return resp.json() }) // convert data to json
+									//.then(data => {console.log(data);
+									//})
+									.then(function(data) {
+										drawWeather(data);
+									})
+									
+									.catch(error => {
+									console.log(error)
+									});
+								}
+							//window.onload = function() {
+							//		weatherBalloon()
+							//	}
+				
+							function drawWeather(data) {
+				
+								var celcius = Math.round(parseFloat(data.main.temp) - 273.15);
+								var fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15)*1.8)+32);
+				
+								document.getElementById('description').innerHTML = data.weather[0].description;
+								
+								document.getElementById('temp').innerHTML = celcius + "&deg;";
+								document.getElementById('location').innerHTML = data.name;
+							
+								if( 15<celcius<30 ){
+									message = "The weather is favourable<br>Hence the outdoor event will HOLD"
+									
+								} else {
+									message ="The weather is unfavourable<br>Hence the Outdoor event is pending"
+									}
+								document.getElementById('favourable').innerHTML = message;	
+							}
+						</script>			
+					
+			</section>
+    </main>
+  </center>		
+<!--web page footer content -->
+  <footer>
+    <center>
+    <div>
+              <a href="#" class="fa fa-facebook">f</a>
+              <a href="#" class="fa fa-twitter">t</a>
+          </div>
+    <div>      
+    <p> copyright&copy; reserved Muhammad_Abdullahi 2020</p>
+  </div>
+    </center>		
+  </footer>
+  
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+
+    </script>
+  </body>
+</html>
